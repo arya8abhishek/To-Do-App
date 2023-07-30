@@ -18,6 +18,12 @@ app.use(express.static(path.join(__dirname, './client/build')));
 
 // API Routes
 
+app.get('/',(req,res)=>{
+  res.json({
+    none:"NOne"
+  });
+})
+
 // Get all todos
 app.get('/todos/:userEmail', async (req, res) => {
   const { userEmail } = req.params;
